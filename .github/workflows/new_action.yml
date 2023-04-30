@@ -1,0 +1,16 @@
+name: new_action
+run-name: ${{ github.actor }} （sanjin）is learning GitHub Actions
+on: 
+  schedule:
+  #'分 时 * * '
+    - cron:  '30 5,17 * * *'
+jobs:
+  print-username:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v
